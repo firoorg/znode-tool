@@ -1485,9 +1485,7 @@ class MainWindow(QMainWindow, WndUtils, ui_main_dlg.Ui_MainWindow):
             node_protocol_version = int(info['protocolversion'])
             node_blocks = int(info['blocks'])
             if self.curMasternode.use_default_protocol_version or not self.curMasternode.protocol_version:
-                protocol_version = node_protocol_version
-                if protocol_version == 90025 and node_blocks < 89300:
-                    protocol_version = 90024
+                protocol_version = 90026
             else:
                 protocol_version = self.curMasternode.protocol_version
 
